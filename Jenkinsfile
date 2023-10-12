@@ -21,7 +21,9 @@ pipeline {
      stage('Build Node JS Docker Image') {
             steps {
                 script {
-                  sh 'docker build -t manojbglr2018/node-app-1.0 .'
+                  sh '''
+                  sudo docker build -t manojbglr2018/node-app-1.0 /var/lib/jenkins/workspace/${JOB_NAME}
+                  '''
                 }
             }
         }
