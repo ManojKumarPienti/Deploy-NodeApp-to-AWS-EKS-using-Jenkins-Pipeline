@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                   sh '''
-                  sudo docker build -t manojbglr2018/node-app-1.0 /var/lib/jenkins/workspace/${JOB_NAME}
+                  sudo docker build -it manojbglr2018/node-app-1.0 /var/lib/jenkins/workspace/${JOB_NAME}
                   '''
                 }
             }
